@@ -1,0 +1,9 @@
+check,result,status,notes
+Duplicate route keys (origin + dest),0,Pass,Each route appears once
+"Missing key values (origin, dest)",0,Pass,Every row has both key values
+Missing ABT cells (all columns),25,Documented,Missing values are identified in the missing-value summary and data dictionary.
+"Nonpositive flight counts, distances and air times",0,Pass,"Checks for invalid nonpositive values in flight counts, distances and air times."
+Routes with a negative max_arr_delay,4,Documented,Negative maximum delays can occur when all recorded flights arrive early; documented in the Your Turn 3 findings.
+Missing target values (avg_arr_delay),1,Documented,Missing target occurs for EWR to LGA because its only flight was cancelled; documented in the data dictionary.
+ABT columns without a dictionary row,0,Pass,Checks that every ABT column has a corresponding data dictionary entry.
+Blank data dictionary cells,0,Pass,Checks that all four documentation fields are populated for every ABT column.
